@@ -4,7 +4,6 @@ const express = require("express");
 const path = require("path");
 // need fs to read and write to files
 const fs = require("fs");
-const { request } = require("http");
 
 // creating an "express" server
 const app = express();
@@ -65,6 +64,7 @@ app.post("/api/notes", function (req, res) {
 	} catch (err) {
 		throw err;
 	}
+	console.log(notesData);
 });
 
 // Delete a note
